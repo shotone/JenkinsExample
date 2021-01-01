@@ -5,8 +5,8 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                echo 'Jobs is Called by User: '
-                sh 'whoami'
+                echo 'Jobs is Called by User: $(whoami)'
+                echo '$(ls -l /home/ | grep "zip")'
             }
 
         }
