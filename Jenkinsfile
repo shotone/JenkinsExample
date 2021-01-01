@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps{
                 echo 'Committed successfully'
-                echo "$(pwd)"
+                sh 'npm install'
             }
 
         }
