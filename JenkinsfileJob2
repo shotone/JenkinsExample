@@ -11,8 +11,11 @@ pipeline {
 
         }
         stage('Results'){
-            sh 'zip -r /home/"${PWD##*/}".zip $(pwd)'
-            sh 'rm -r $(pwd)'
+            steps{
+                sh 'zip -r /home/"${PWD##*/}".zip $(pwd)'
+                sh 'rm -r $(pwd)'
+            }
+
         }
 
     }
