@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                echo 'Committed successfully'
+                echo 'Jobs is Called by User: '
+                sh 'whoami'
             }
 
         }
