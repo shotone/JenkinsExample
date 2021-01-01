@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps{
                 echo 'Committed successfully'
-                sh 'npm -v'
+                sh '/opt/node-v12.16.1-linux-x64/bin/npm install'
             }
 
         }
