@@ -14,7 +14,7 @@ pipeline {
             steps{
                 sh 'sudo zip -r /home/"${PWD##*/}".zip $(pwd)'
 
-                sh 'name=${PWD##*/} ; cd .. ; sudo rm -r $name*'
+                sh 'name=${PWD##*/} ; sudo rm -rf ../$name*'
             }
 
         }
