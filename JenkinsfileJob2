@@ -22,7 +22,7 @@ pipeline {
         stage('DEPLOY'){
             steps{
                 script{
-                    build job: 'Job2',
+                    build job: 'Job2'
                 }
             }
         }
