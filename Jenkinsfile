@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps{
                 echo 'Committed successfully'
-                sh 'bashFile.sh'
+                echo '$(pwd)'
             }
 
         }
