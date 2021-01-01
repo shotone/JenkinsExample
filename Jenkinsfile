@@ -6,14 +6,10 @@ pipeline {
         stage('Build') {
             steps{
                 echo 'Committed successfully'
-            }
-
-        }
-
-        stage('Build'){
-            steps{
                 sh 'npm install'
             }
+
         }
+
     }
 }
