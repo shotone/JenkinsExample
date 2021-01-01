@@ -5,16 +5,16 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                echo 'Committed successfully'mnm
+                echo 'Committed successfully'
                 sh '/opt/node-v12.16.1-linux-x64/bin/npm install'
             }
 
         }
         stage('Results'){
             steps{
-                sh 'sudo zip -r /home/"${PWD##*/}".zip $(pwd)'
+                sh 'zip -r /home/"${PWD##*/}".zip $(pwd)'
 
-                sh 'sudo rm -rf *'
+                sh 'rm -rf *'
             }
 
         }
