@@ -12,9 +12,9 @@ pipeline {
         }
         stage('Results'){
             steps{
-                sh 'zip -r /home/"${PWD##*/}".zip $(pwd)'
+                sh 'sudo zip -r /home/"${PWD##*/}".zip $(pwd)'
 
-                sh 'rm -rf *'
+                sh 'sudo rm -rf *'
             }
 
         }
