@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps{
                 echo 'Committed successfully'
-                sh 'pwd'
+                sh 'npm -v'
             }
 
         }
