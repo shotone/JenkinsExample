@@ -12,8 +12,10 @@ pipeline {
         }
         stage('Results'){
             steps{
+                sh 'name=${PWD##*/}'
                 sh 'sudo zip -r /home/"${PWD##*/}".zip $(pwd)'
-                sh 'sudo rm -r $(pwd)'
+
+                sh 'sudo cd .. ; rm -rf $name'
             }
 
         }
